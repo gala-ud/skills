@@ -1,10 +1,10 @@
 ---
 name: plan-first
-description: Write a short step-by-step implementation plan and get it accepted before changing code. Use for any change that touches more than one file, adds a dependency, changes a data schema or public interface, or will take more than a few minutes; also when the user asks to plan, outline an approach, or "think before coding". Skip for one-line fixes and typos.
+description: Write a short step-by-step implementation plan and get it accepted before changing code. Use once what to build is clear, for any change that touches more than one source file, needs more than about three distinct edits, adds a dependency, or changes a data schema or public interface; also when the user asks to plan, outline an approach, or "think before coding". Skip for small single-purpose edits confined to one file (typos, version bumps, one-function fixes), even if a lockfile changes too. If scope is still open, use idea-to-spec first.
 license: MIT
 metadata:
   author: gala-ud
-  version: 0.1.0
+  version: 0.2.0
 ---
 
 # Plan first
@@ -16,7 +16,8 @@ is the cheapest place to catch a wrong approach.
 
 1. **Read before planning.** Open the files the change will touch and one
    level of what calls them. Find how the project already solves similar
-   problems and follow that pattern. Note the test and build commands.
+   problems and follow that pattern. Note the test and build commands. Say
+   what you have not read yet.
 
 2. **State the goal in one sentence** and list what is explicitly out of
    scope. If a spec exists, link it instead of restating it.
@@ -24,7 +25,8 @@ is the cheapest place to catch a wrong approach.
 3. **Write the plan** using the template below.
 
 4. **Show the plan and wait.** Start coding only after the user accepts it.
-   If the user has said to proceed without asking, show the plan and continue.
+   If the user has said to proceed without asking, show the plan and continue,
+   except for held steps (see the rules).
 
 5. **Follow the plan.** If reality disagrees with it, stop, say what changed,
    and update the plan before continuing. Do not silently improvise.
@@ -47,7 +49,7 @@ with the reason.
 - <what could go wrong> -> <how you will notice> -> <fallback>
 
 ## Not sure about
-- Questions that would change the plan, each with your default.
+- Up to three questions that would change the plan, each with your default.
 ```
 
 ## Rules for steps
@@ -60,6 +62,9 @@ with the reason.
   first, even if it is not first logically.
 - **Data before code.** Schema changes and migrations come before the code
   that depends on them, and each migration states how to roll back.
+- **Hold what cannot be undone.** Mark as **Held** any step that deletes data,
+  drops a column or table, or breaks something another team or system reads.
+  A held step waits for an explicit yes, even when the user said to proceed.
 - **3 to 8 steps.** Fewer means the steps are too large to check; more means
   the task should be split into two plans.
 - **Name files.** "Update the auth logic" is not a step. "Add token refresh to
@@ -69,5 +74,6 @@ with the reason.
 
 - Code. A plan with code in it has already skipped the planning.
 - Steps for things nobody asked for: refactors, renames, extra abstractions.
-  List them under "Not sure about" if they seem worthwhile.
+  Mention one under "Not sure about" only if skipping it would hurt the result.
+- Questions whose answer would not change a step. Decide those yourself.
 - Time estimates.

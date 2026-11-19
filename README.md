@@ -45,6 +45,13 @@ example `.claude/skills/` or `.agents/skills/`.
 |---|---|
 | [`natural-writing`](skills/natural-writing/SKILL.md) | Rewrites a draft so it reads as written by a person. Cuts stock AI phrasing and keeps every fact, number and quote. |
 
+### Reply style
+
+| Skill | What it does |
+|---|---|
+| [`next-step-first`](skills/next-step-first/SKILL.md) | Puts the next action in line 1, then short numbered steps. A warning comes before the step it guards. |
+| [`brief-mode`](skills/brief-mode/SKILL.md) | Short replies and compressed tool-output reports that keep every number, warning and unverified item. |
+
 More skills are on the way, in these areas and in new ones: debugging, tests,
 release, research, design, marketing.
 

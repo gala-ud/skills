@@ -35,6 +35,7 @@ example `.claude/skills/` or `.agents/skills/`.
 | Idea | [`idea-to-spec`](skills/idea-to-spec/SKILL.md) | Turns a rough idea into a one-page spec with explicit scope, including what version 1 will not do. |
 | Plan | [`plan-first`](skills/plan-first/SKILL.md) | Writes a 3-8 step plan before touching code. Every step has a check and leaves the project working. |
 | Review | [`self-review`](skills/self-review/SKILL.md) | Reviews its own diff as a skeptical reviewer before commit. Claims need a command and its output. |
+| Writing | [`natural-writing`](skills/natural-writing/SKILL.md) | Rewrites a draft so it reads as written by a person. Cuts stock AI phrasing and keeps every fact, number and quote. |
 
 More stages are on the way: schema design, debugging, tests, release, handoff.
 

@@ -10,8 +10,6 @@ changing its facts.
 Works with Claude Code, Codex, Cursor, Gemini CLI and other agents that read
 `SKILL.md`.
 
-[Українською](README.uk.md)
-
 ## Install
 
 All skills:
@@ -38,12 +36,19 @@ example `.claude/skills/` or `.agents/skills/`.
 | Idea | [`idea-to-spec`](skills/idea-to-spec/SKILL.md) | Turns a rough idea into a one-page spec with explicit scope, including what version 1 will not do. |
 | Plan | [`plan-first`](skills/plan-first/SKILL.md) | Writes a 3-8 step plan before touching code. Every step has a check and leaves the project working. |
 | Review | [`self-review`](skills/self-review/SKILL.md) | Reviews its own diff as a skeptical reviewer before commit. Claims need a command and its output. |
+| Explore | [`architecture-sketch`](skills/architecture-sketch/SKILL.md) | Draws an architecture or sequence diagram from the code. Every box and arrow cites a file and line. |
 
 ### Writing
 
 | Skill | What it does |
 |---|---|
 | [`natural-writing`](skills/natural-writing/SKILL.md) | Rewrites a draft so it reads as written by a person. Cuts stock AI phrasing and keeps every fact, number and quote. |
+
+### Research
+
+| Skill | What it does |
+|---|---|
+| [`recent-brief`](skills/recent-brief/SKILL.md) | Briefs you on what happened on a topic in the last 30 days. Every item has a date, a link and a status: confirmed, reported or chatter. |
 
 ### Reply style
 
@@ -53,7 +58,7 @@ example `.claude/skills/` or `.agents/skills/`.
 | [`brief-mode`](skills/brief-mode/SKILL.md) | Short replies and compressed tool-output reports that keep every number, warning and unverified item. |
 
 More skills are on the way, in these areas and in new ones: debugging, tests,
-release, research, design, marketing.
+release, design, marketing.
 
 ## Principles
 

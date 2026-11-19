@@ -1,10 +1,11 @@
 # skills
 
-Agent skills for solo developers: from idea to release.
+Small agent skills for everyday work: building software, writing, and more.
 
-Small, composable [Agent Skills](https://agentskills.io) that make a coding
-agent work the way a careful one-person team does: write the spec down, plan
-before coding, and check its own work before calling it done.
+Each one is a short [Agent Skill](https://agentskills.io) that does a single
+job the way a careful person would: write the spec down before building, plan
+before coding, check the work before calling it done, edit a text without
+changing its facts.
 
 Works with Claude Code, Codex, Cursor, Gemini CLI and other agents that read
 `SKILL.md`.
@@ -22,7 +23,7 @@ npx skills add gala-ud/skills
 One skill:
 
 ```bash
-npx skills add gala-ud/skills --skill plan-first
+npx skills add gala-ud/skills --skill natural-writing
 ```
 
 Or copy a folder from `skills/` into your agent's skills directory, for
@@ -30,14 +31,22 @@ example `.claude/skills/` or `.agents/skills/`.
 
 ## Skills
 
+### Building software
+
 | Stage | Skill | What it does |
 |---|---|---|
 | Idea | [`idea-to-spec`](skills/idea-to-spec/SKILL.md) | Turns a rough idea into a one-page spec with explicit scope, including what version 1 will not do. |
 | Plan | [`plan-first`](skills/plan-first/SKILL.md) | Writes a 3-8 step plan before touching code. Every step has a check and leaves the project working. |
 | Review | [`self-review`](skills/self-review/SKILL.md) | Reviews its own diff as a skeptical reviewer before commit. Claims need a command and its output. |
-| Writing | [`natural-writing`](skills/natural-writing/SKILL.md) | Rewrites a draft so it reads as written by a person. Cuts stock AI phrasing and keeps every fact, number and quote. |
 
-More stages are on the way: schema design, debugging, tests, release, handoff.
+### Writing
+
+| Skill | What it does |
+|---|---|
+| [`natural-writing`](skills/natural-writing/SKILL.md) | Rewrites a draft so it reads as written by a person. Cuts stock AI phrasing and keeps every fact, number and quote. |
+
+More skills are on the way, in these areas and in new ones: debugging, tests,
+release, research, design, marketing.
 
 ## Principles
 
@@ -46,7 +55,8 @@ More stages are on the way: schema design, debugging, tests, release, handoff.
   names, so you can install these alongside the large collections.
 - **Portable.** Only standard `SKILL.md` frontmatter and plain Markdown. No
   scripts, no network calls.
-- **Evidence over confidence.** The agent shows what it ran and what happened.
+- **Evidence over confidence.** The agent shows what it ran and what happened,
+  and never adds a fact you did not give it.
 
 ## Status
 

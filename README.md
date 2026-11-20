@@ -1,6 +1,6 @@
 # skills
 
-Small agent skills for everyday work: building software, writing, and more.
+Small agent skills for everyday work: building software, writing, design, research and marketing.
 
 Each one is a short [Agent Skill](https://agentskills.io) that does a single
 job the way a careful person would: write the spec down before building, plan
@@ -50,6 +50,19 @@ example `.claude/skills/` or `.agents/skills/`.
 |---|---|
 | [`recent-brief`](skills/recent-brief/SKILL.md) | Briefs you on what happened on a topic in the last 30 days. Every item has a date, a link and a status: confirmed, reported or chatter. |
 
+### Design
+
+| Skill | What it does |
+|---|---|
+| [`ui-critique`](skills/ui-critique/SKILL.md) | Reviews a page or component and returns at most 7 ranked findings. Each one names the element, the measured problem and the fix. |
+| [`site-style`](skills/site-style/SKILL.md) | Builds or extends a site through one small set of design tokens, so every page looks like the same site. |
+
+### Marketing
+
+| Skill | What it does |
+|---|---|
+| [`landing-copy`](skills/landing-copy/SKILL.md) | Writes landing page copy from your facts: one reader, one promise, one action. Missing proof is marked, never invented. |
+
 ### Reply style
 
 | Skill | What it does |
@@ -58,7 +71,7 @@ example `.claude/skills/` or `.agents/skills/`.
 | [`brief-mode`](skills/brief-mode/SKILL.md) | Short replies and compressed tool-output reports that keep every number, warning and unverified item. |
 
 More skills are on the way, in these areas and in new ones: debugging, tests,
-release, design, marketing.
+release, security.
 
 ## Principles
 

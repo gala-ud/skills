@@ -34,8 +34,10 @@ example `.claude/skills/` or `.agents/skills/`.
 | Stage | Skill | What it does |
 |---|---|---|
 | Idea | [`idea-to-spec`](skills/idea-to-spec/SKILL.md) | Turns a rough idea into a one-page spec with explicit scope, including what version 1 will not do. |
+| Challenge | [`poke-holes`](skills/poke-holes/SKILL.md) | Interviews you about a plan one question at a time, hardest-to-undo decisions first, each with a recommended answer. Ends with a decision record. |
 | Plan | [`plan-first`](skills/plan-first/SKILL.md) | Writes a 3-8 step plan before touching code. Every step has a check and leaves the project working. |
 | Build | [`less-code`](skills/less-code/SKILL.md) | Solves the task with the least code that fully meets the request, or audits a diff for what can be deleted. Never cuts validation, error handling or tests. |
+| Verify | [`verify-before-done`](skills/verify-before-done/SKILL.md) | Before saying "done", runs a check for every claim on the final code and reports each as verified, failed or not verified, with the command and its output. |
 | Review | [`self-review`](skills/self-review/SKILL.md) | Reviews its own diff as a skeptical reviewer before commit. Claims need a command and its output. |
 | Review | [`role-reviews`](skills/role-reviews/SKILL.md) | Reviews a change or a plan from five roles (product, design, engineering, QA, security) and merges the findings into one ship decision. |
 | Explore | [`architecture-sketch`](skills/architecture-sketch/SKILL.md) | Draws an architecture or sequence diagram from the code. Every box and arrow cites a file and line. |
